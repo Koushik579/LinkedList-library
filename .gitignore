@@ -1,0 +1,26 @@
+# NetBeans build files
+build/
+nbproject/private/
+dist/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+bin/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
