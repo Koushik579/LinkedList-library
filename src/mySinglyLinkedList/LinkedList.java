@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package mySinglyLinkedList;
 
 /**
  *
- * @author username
+ * @author Koushik
+ * @param <T>
  */
 public class LinkedList<T> {
 
     private Node<T> head;
 
     public void insert(T data) {
-        Node<T> node = new Node<T>();
+        Node<T> node = new Node<>();
         node.data = data;
         node.next = null;
 
@@ -28,30 +25,34 @@ public class LinkedList<T> {
         }
     }
 
-    public void insertAt(int index,T data) {
-        Node<T> node = new Node<T>();
+    public void insertAt(int index, T data) {
+        Node<T> node = new Node<>();
         node.data = data;
-        if(index > size()-1)
-        {
+        if (index > size() - 1) {
             throw new IndexOutOfBoundsException("Index must be within the size of the list");
-        }
-        else
-        {
+        } else if (index == 0) {
+            throw new IllegalArgumentException("Use insertStart() for index '0'");
+        } else {
             Node<T> tempnode = head;
-            int count = 0 ;
-            while(tempnode.next != null)
-            {
+            int count = 0;
+            while (tempnode.next != null) {
                 count++;
-                if(count == index-1)
-                {
+                if (count == index - 1) {
                     node.next = tempnode.next;
                     tempnode.next = node;
                     return;
                 }
                 tempnode = tempnode.next;
             }
-            
+
         }
+    }
+
+    public void insertStart(T data) {
+        Node<T> node = new Node<>();
+        node.data = data;
+        node.next = head;
+        head = node;
     }
 
     public void show() {
