@@ -7,6 +7,7 @@ package com.koushik.doublyLinkedList;
 public class DLinkedList<T> {
 
     public DNode head;
+    public DNode tail;
 
     public void insert(T data) {
         DNode<T> node = new DNode<>();
@@ -15,6 +16,7 @@ public class DLinkedList<T> {
         node.pre = null;
         if (head == null) {
             head = node;
+            tail = node;
         } else {
             DNode tempnode = head;
             while (tempnode.next != null) {
@@ -22,6 +24,7 @@ public class DLinkedList<T> {
             }
             tempnode.next = node;
             node.pre = tempnode;
+            tail = node;
         }
     }
 
@@ -86,7 +89,7 @@ public class DLinkedList<T> {
 
         }
     }
-    
+
     public void isEmpty() {
         boolean isempty = false;
         String msg = "'false' means the list is not empty";
@@ -97,7 +100,7 @@ public class DLinkedList<T> {
         System.out.println(isempty);
         System.out.println(msg);
     }
-    
+
     public boolean isPresent(int data) {
         DNode tempnode = head;
         boolean ispresent = false;
@@ -110,7 +113,7 @@ public class DLinkedList<T> {
         }
         return ispresent;
     }
-    
+
     public int getData(int index) {
         int count = 0;
         int data = 0;
@@ -129,5 +132,21 @@ public class DLinkedList<T> {
             }
         }
         return data;
+    }
+
+    public String reverse() {
+        StringBuilder sb = new StringBuilder("[ ");
+
+        DNode tempnode = tail;
+        while (tempnode != null) {
+            sb.append(tempnode.data);
+            if (tempnode.pre != null) {
+                sb.append(" , ");
+            }
+            tempnode = tempnode.pre;
+        }
+
+        sb.append(" ]");
+        return sb.toString();
     }
 }
