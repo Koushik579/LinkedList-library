@@ -29,20 +29,20 @@ public class LinkedList<T> {
         Node<T> node = new Node<>();
         node.data = data;
         if (index > size() - 1) {
-            throw new IndexOutOfBoundsException("Index must be within the size of the list");
+            throw new IndexOutOfBoundsException("Illegal Index");
         } else if (index == 0) {
             throw new IllegalArgumentException("Use insertStart() for index '0'");
         } else {
             Node<T> tempnode = head;
             int count = 0;
             while (tempnode.next != null) {
-                count++;
                 if (count == index - 1) {
                     node.next = tempnode.next;
                     tempnode.next = node;
                     return;
                 }
                 tempnode = tempnode.next;
+                count++;
             }
 
         }

@@ -9,8 +9,8 @@ package com.koushik.doublyLinkedList;
  * @author Koushik
  * @param <T>
  */
-public class Node<T> {
+public class DNode<T> {
   public T data;
-  public Node<T> next;
-  public Node<T> pre;
+  public DNode<T> next;
+  public DNode<T> pre;
 }
