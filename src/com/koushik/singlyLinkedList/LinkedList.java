@@ -1,4 +1,4 @@
-package mySinglyLinkedList;
+package com.koushik.singlyLinkedList;
 
 /**
  *
