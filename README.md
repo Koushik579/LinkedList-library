@@ -1,23 +1,37 @@
-# 📚 Singly Linked List Library (Java)
+# 📚 Linked List Library (Java)
 
-A simple and reusable **Singly Linked List implementation in Java**, built as a learning-focused library.  
-This project provides a custom `LinkedList` and `Node` class to understand internal working of linked lists without using Java’s built-in collections.
+A learning-focused Java library that provides **custom implementations of Singly Linked List and Doubly Linked List**.  
+This project is built to understand how linked lists work internally, without using Java’s built-in collection classes.
 
 ---
 
 ## ✨ Features
-- Custom implementation of a **Singly Linked List**
+
+### 🔹 Singly Linked List
+- Custom `LinkedList` implementation
 - Node-based structure (`Node` class)
-- Supports basic linked list operations
-- Clean and readable code
+- Forward traversal
+- Core linked list operations
+- Clean and readable logic
+
+### 🔹 Doubly Linked List
+- Custom `DLinkedList` implementation
+- Two-way node linking using `DNode`
+- Forward and backward traversal
+- Better understanding of previous & next references
+
+### 🔹 General
 - Designed as a **library**, not a runnable application
+- Fully object-oriented design
+- Easy to extend and reuse
+- Ideal for DSA and interview preparation
 
 ---
 
 ## 🛠 Technologies Used
 - **Java (Core Java)**
 - Object-Oriented Programming (OOP)
-- Custom data structure implementation
+- Custom Data Structure Implementation
 
 ---
 
@@ -25,9 +39,14 @@ This project provides a custom `LinkedList` and `Node` class to understand inter
 
 MyLinkedList/
 ├─ src/
-│ └─ mySinglyLinkedList/
-│ ├─ LinkedList.java (Linked list operations)
-│ └─ Node.java (Node structure)
+│ └─ com/
+│ └─ koushik/
+│ ├─ singlyLinkedList/
+│ │ ├─ LinkedList.java
+│ │ └─ Node.java
+│ └─ doublyLinkedList/
+│ ├─ DLinkedList.java
+│ └─ DNode.java
 ├─ build/
 ├─ nbproject/
 ├─ README.md
@@ -38,36 +57,45 @@ MyLinkedList/
 ---
 
 ## 📌 Usage
-This project is intended to be **used as a library**.
+This project is intended to be used as a **library**.
 
-You can import and use it in another Java project:
+### Singly Linked List
 
-import mySinglyLinkedList.LinkedList;
+import com.koushik.singlyLinkedList.LinkedList;
 
 
-Create and manipulate the linked list using the exposed methods.
+### Doubly Linked List
+
+import com.koushik.doublyLinkedList.DLinkedList;
+
+
+Create and manipulate the lists using the provided methods.
 
 ---
 
 ## 🎯 Learning Objectives
-- Understand how linked lists work internally
-- Practice pointer/reference manipulation
+- Understand internal working of linked lists
+- Learn node-based memory linking
+- Practice reference manipulation
 - Implement data structures from scratch
 - Improve problem-solving and Java fundamentals
-- Learn how to structure reusable Java libraries
+- Prepare for DSA interviews
 
 ---
 
 ## 🚧 Possible Enhancements
 - Add delete operations
 - Add search functionality
-- Add size tracking
-- Add reverse traversal
+- Track list size
+- Add reverse operations
+- Implement circular linked list
 - Add unit tests
+- Add iterator support
 
 ---
 
 ## 👤 Author
 **Koushik Karmakar**  
 B.Tech Civil Engineering Student  
-Learning Java, Data Structures & Backend Development
+Learning **Java**, **Data Structures**, and **Backend Development**
+
