@@ -171,4 +171,15 @@ public class LinkedList<T> {
         }
         return ispresent;
     }
+
+    public void isEmpty() {
+        boolean isempty = false;
+        String msg = "'false' means the list is not empty";
+        if (head == null) {
+            isempty = true;
+            msg = "'true' means the list is empty";
+        }
+        System.out.println(isempty);
+        System.out.println(msg);
+    }
 }
